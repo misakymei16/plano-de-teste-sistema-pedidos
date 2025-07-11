@@ -1,0 +1,518 @@
+{
+  "id": "c5b0585e-9304-4fc9-85f7-e267674097a7",
+  "version": "2.0",
+  "name": "Pedido Teste",
+  "url": "http://127.0.0.1:5500",
+  "tests": [{
+    "id": "2cfca72b-8f98-4e91-ab65-8c5a6a33cb90",
+    "name": "CT1 – Adicionar pedido válido",
+    "commands": [{
+      "id": "66b01cf1-68e0-4bec-86e0-f5f536dc3f90",
+      "comment": "",
+      "command": "open",
+      "target": "/pedido-teste.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1562be6-c174-4bf1-b5d8-480f2f64f15e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x754",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d73dda4a-ae2c-4573-b31c-81000db4ffe6",
+      "comment": "",
+      "command": "click",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fa2068a-5d01-473c-bec5-b89f6626668d",
+      "comment": "",
+      "command": "type",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "João Silva"
+    }, {
+      "id": "51e8c665-fab7-4a74-adbc-22ce284089ae",
+      "comment": "",
+      "command": "click",
+      "target": "id=tamanho",
+      "targets": [
+        ["id=tamanho", "id"],
+        ["css=#tamanho", "css:finder"],
+        ["xpath=//select[@id='tamanho']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "431f4b01-dd30-4f42-b2d2-a4d7a2ea5d3b",
+      "comment": "",
+      "command": "select",
+      "target": "id=tamanho",
+      "targets": [],
+      "value": "label=M"
+    }, {
+      "id": "a6d0ecfb-5015-487e-8a7e-9a27924db48a",
+      "comment": "",
+      "command": "click",
+      "target": "id=turma",
+      "targets": [
+        ["id=turma", "id"],
+        ["css=#turma", "css:finder"],
+        ["xpath=//select[@id='turma']", "xpath:attributes"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04b64f13-1c3a-40e5-a2ea-b659a1583dcd",
+      "comment": "",
+      "command": "select",
+      "target": "id=turma",
+      "targets": [],
+      "value": "label=Verde"
+    }, {
+      "id": "2da4cfcd-8665-4362-934c-785f41bfde12",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c66b505-57a5-425b-8b78-0fb9d1eef9d6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c8e0cdb-65fa-440d-b911-2c9bcfda1768",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a882038-c5e5-4f2d-bad0-486f1e7cc399",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "97eb5937-3004-471c-81b7-5edd3a0ce5da",
+    "name": "CT2 - Adicionar múltiplos pedidos e verificar total",
+    "commands": [{
+      "id": "8ff2d198-aa99-4b87-b913-b0f89a68b3f8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8b3c6e7-2bb1-492f-a3b8-5fa25af8c066",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x718",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7755e3f0-6ec5-43c0-b354-fdff669b115b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=~",
+      "targets": [
+        ["linkText=~", "linkText"],
+        ["css=h1 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'~')]", "xpath:link"],
+        ["xpath=//div[@id='wrapper']/h1/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'~')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "156639cb-16e6-4386-9cce-789cb0921538",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-html > .name",
+      "targets": [
+        ["css=.icon-html > .name", "css:finder"],
+        ["xpath=//ul[@id='files']/li/a/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'pedido-teste.html')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5a43985-a489-4923-bf1c-56945c522a93",
+      "comment": "",
+      "command": "click",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "253c6f57-03b7-48ea-bb09-1210229ce6ea",
+      "comment": "",
+      "command": "type",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Maria Santos"
+    }, {
+      "id": "5b358a57-0fa7-47e9-9475-56e3df9f4503",
+      "comment": "",
+      "command": "click",
+      "target": "id=tamanho",
+      "targets": [
+        ["id=tamanho", "id"],
+        ["css=#tamanho", "css:finder"],
+        ["xpath=//select[@id='tamanho']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ae61886-cfec-42e1-8419-333bac0cedea",
+      "comment": "",
+      "command": "select",
+      "target": "id=tamanho",
+      "targets": [],
+      "value": "label=P"
+    }, {
+      "id": "b21b9b90-1b83-4cf4-9e43-aeace45799fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=turma",
+      "targets": [
+        ["id=turma", "id"],
+        ["css=#turma", "css:finder"],
+        ["xpath=//select[@id='turma']", "xpath:attributes"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4951c6c8-ba6d-4049-88c1-1f2721bbc5f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bf3d6d0-b0c6-4dde-a00b-74f268d25b71",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9aa7ce5-bebb-450e-8abb-7c279fbfe400",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfde0148-bae4-4622-803d-6aef2df61741",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56f88180-5b83-427c-953b-3410729ba621",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "869c4562-336e-41fd-b3d1-176357b4e8da",
+      "comment": "",
+      "command": "type",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pedro Costa"
+    }, {
+      "id": "1b7790c3-4eea-40c2-8f4f-870735da12c0",
+      "comment": "",
+      "command": "click",
+      "target": "id=tamanho",
+      "targets": [
+        ["id=tamanho", "id"],
+        ["css=#tamanho", "css:finder"],
+        ["xpath=//select[@id='tamanho']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9085df5-3892-48af-b57e-f186f01a34c2",
+      "comment": "",
+      "command": "select",
+      "target": "id=tamanho",
+      "targets": [],
+      "value": "label=G"
+    }, {
+      "id": "132bea4c-94f5-4f13-8604-5855b64687ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=turma",
+      "targets": [
+        ["id=turma", "id"],
+        ["css=#turma", "css:finder"],
+        ["xpath=//select[@id='turma']", "xpath:attributes"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "184b6d17-b446-4c94-ae42-6b9fcd36fc42",
+      "comment": "",
+      "command": "select",
+      "target": "id=turma",
+      "targets": [],
+      "value": "label=Preto"
+    }, {
+      "id": "c4e0e5b7-3165-4eb8-b450-59384c7c85b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c737c53-3e96-4594-96a4-278d1cedd9fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6a80c67-dce6-42ef-bb4f-3174e02da323",
+      "comment": "",
+      "command": "type",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Ana Oliveira"
+    }, {
+      "id": "a3d536b3-3925-4d63-a63d-764df023295a",
+      "comment": "",
+      "command": "click",
+      "target": "id=tamanho",
+      "targets": [
+        ["id=tamanho", "id"],
+        ["css=#tamanho", "css:finder"],
+        ["xpath=//select[@id='tamanho']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f39627da-a566-4c6c-a110-7913c3a123c4",
+      "comment": "",
+      "command": "select",
+      "target": "id=tamanho",
+      "targets": [],
+      "value": "label=M"
+    }, {
+      "id": "04657a9f-d805-4980-a7bd-ffdebbe04b29",
+      "comment": "",
+      "command": "click",
+      "target": "id=turma",
+      "targets": [
+        ["id=turma", "id"],
+        ["css=#turma", "css:finder"],
+        ["xpath=//select[@id='turma']", "xpath:attributes"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62751bcb-8739-4380-b5bf-7f693f24d1be",
+      "comment": "",
+      "command": "select",
+      "target": "id=turma",
+      "targets": [],
+      "value": "label=Vermelho"
+    }, {
+      "id": "2d87bd6a-2e14-4cba-b5f8-fd4519edb792",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "df2499f2-0089-4fa7-8aac-5dbe11390571",
+    "name": "CT3 – Validar campos obrigatórios",
+    "commands": [{
+      "id": "058994ca-4ec2-47f3-94ab-d6f56b2332e6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5aed7522-1b79-4066-9757-56b710649c5f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x718",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f3d058d-cba1-4b54-ab0a-76ff4117ba14",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-html > .name",
+      "targets": [
+        ["css=.icon-html > .name", "css:finder"],
+        ["xpath=//ul[@id='files']/li/a/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'pedido-teste.html')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44533946-d61e-4c25-a04c-e333a85b73e8",
+      "comment": "",
+      "command": "click",
+      "target": "id=aluno",
+      "targets": [
+        ["id=aluno", "id"],
+        ["css=#aluno", "css:finder"],
+        ["xpath=//input[@id='aluno']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4379f5d9-58a7-44e5-ade0-b16dcee508ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=tamanho",
+      "targets": [
+        ["id=tamanho", "id"],
+        ["css=#tamanho", "css:finder"],
+        ["xpath=//select[@id='tamanho']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a61d8cd1-b5ea-41f5-8816-7eeaa0b504dd",
+      "comment": "",
+      "command": "click",
+      "target": "id=turma",
+      "targets": [
+        ["id=turma", "id"],
+        ["css=#turma", "css:finder"],
+        ["xpath=//select[@id='turma']", "xpath:attributes"],
+        ["xpath=//div[3]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f554b636-64d0-4440-8630-13c3f5145505",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "afd77b5c-70a0-423a-8653-9cfe6202a046",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=aluno",
+      "targets": [],
+      "value": "\"\""
+    }]
+  }],
+  "suites": [{
+    "id": "8a1d32ed-c780-4f2c-97a3-f1e5e0f6f795",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2cfca72b-8f98-4e91-ab65-8c5a6a33cb90"]
+  }],
+  "urls": ["http://127.0.0.1:5500/"],
+  "plugins": []
+}
